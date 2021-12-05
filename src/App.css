@@ -1,38 +1,87 @@
-.App {
+* {
+  border-style: border-box;
+  margin: 0;
+  padding: 0;
+}
+.currencyInputWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 35px;
+  justify-content: center;
+  background-color: aliceblue;
+  border: 1px solid darkgray;
+  border-radius: 4px;
+}
+.currencyInput {
+  outline: none;
+  margin: 15px;
+  width: 45px;
+  font-size: 1.2rem;
+  color: darkslategrey;
   text-align: center;
+  border: 2px solid rgb(185, 185, 206);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainWrap {
+  width: 400px;
+  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.convertation {
+  background-color: aliceblue;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 350px;
+  border: 1px solid darkgray;
+  border-radius: 4px;
 }
-
-.App-link {
-  color: #61dafb;
+.inputWrapper {
+  margin: 15px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.convInputMain:hover {
+  background-color: rgb(182, 202, 255);
+}
+.convInputReadonly:hover {
+  background-color: rgb(211, 164, 156);
+}
+.convertationInput {
+  width: 200px;
+  border: none;
+  text-align: center;
+  margin: 5px;
+  font-size: 1.1rem;
+  padding: 3px;
+  background-color: aliceblue;
+  outline: none;
+  border: 0.8px rosybrown solid;
+}
+.wrapInputandCurrency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.convertBtn {
+  margin: 12px;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  background-color: rosybrown;
+  border-radius: 15px;
+  font-style: oblique;
+}
+.currencyName {
+  font-size: 1.2rem;
+}
+.wrap {
+  background-color: rgb(171, 190, 231);
+  height: 100vh;
 }
