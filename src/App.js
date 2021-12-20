@@ -17,10 +17,12 @@ const App = () => {
       .then((response) => {
         setRate(response.data);
       })
-      .catch((error) => {});
+      .catch((error) => {
+        console.error("error");
+      });
   };
   useEffect(
-    () => setRes(Math.round(rate[`${first}_${second}`] * userInput)),
+    () => setRes((rate[`${first}_${second}`] * userInput).toFixed(1)),
     [rate, userInput, first, second]
   );
   const reverser = () => {
@@ -28,7 +30,7 @@ const App = () => {
   };
   return (
     <>
-      <div className="wrap">
+      <div className="wrapApp">
         <div className="mainWrap">
           <h2>CURRENCY CONVERTER</h2>{" "}
           <p>Enter a currency code (example: UAH)</p>
@@ -40,7 +42,6 @@ const App = () => {
               placeholder="FROM"
               onChange={(e) => setFirst(e.target.value)}
               required
-              pattern="/^[A-Z]{3}$/gm"
             />
             <img
               src="https://img.icons8.com/color/48/000000/connection-sync--v1.png"
@@ -56,9 +57,10 @@ const App = () => {
             />
           </div>
           <div className="convertation">
-            <div className="inputWrapper">
+            <div className="convertationInputWrapper">
               <div className="wrapInputandCurrency">
                 <input
+                  type="number"
                   value={userInput}
                   onChange={(e) => setUserInput(Number(e.target.value))}
                   className="convertationInput convInputMain"
@@ -67,13 +69,14 @@ const App = () => {
                 ></input>
                 <p className="currencyName"> {first} </p>
               </div>
-              <div readonly className="wrapInputandCurrency">
-                {" "}
+              <div className="wrapInputandCurrency">
                 <input
                   className="convertationInput convInputReadonly"
                   value={isNaN(res) ? "" : res}
                   placeholder="amount"
-                />{" "}
+                  type="number"
+                  readonly
+                />
                 <p className="currencyName"> {second}</p>
               </div>
             </div>

@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 .currencyInputWrapper {
   display: flex;
   flex-direction: row;
@@ -17,16 +18,15 @@
   outline: none;
   margin: 15px;
   width: 45px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: darkslategrey;
   text-align: center;
   border: 2px solid rgb(185, 185, 206);
 }
 
-
 .mainWrap {
   width: 400px;
-  height: 40vw;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +45,7 @@
   border: 1px solid darkgray;
   border-radius: 4px;
 }
-.inputWrapper {
+.convertationInputWrapper {
   margin: 15px;
 }
 .convInputMain:hover {
@@ -79,9 +79,9 @@
   font-style: oblique;
 }
 .currencyName {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
-.wrap {
+.wrapApp {
   background-color: rgb(171, 190, 231);
   height: 100vh;
 }
